@@ -29,6 +29,8 @@
     <!-- Main Content -->
     <main>
         <div class="container">
+            <!-- Обернули таблицы в форму -->
+            <form action="/submit-url" method="POST"> <!--напиши нужный URL в action -->
             <table class="info-table">
                 <thead class="info-table-thead">
                     <tr>
@@ -309,7 +311,14 @@
                 <!-- /.info-table-tbody -->
             </table>
             <!-- /.info-table -->
-            <button class="generate-btn">Сгенерировать слайды</button>
+            <!-- Кнопки для отправки формы и генерации ответа -->
+            <div class="button-container">
+                <!-- Кнопка для сохранения данных -->
+                <button type="submit" formaction="/save-data-url" class="button button--primary">Сохранить данные</button> 
+                <!-- Кнопка для генерации ответа -->
+                <button type="button" onclick="generateResponse()" class="button button--secondary">Сгенерировать слайды</button> 
+            </div>
+            </form> 
         </div>
         <!-- /.container -->
     </main>
